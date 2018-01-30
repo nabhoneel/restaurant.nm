@@ -1,0 +1,59 @@
+create table `order`(
+id INT(100) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+date TIMESTAMP,
+`customer name` varchar(400),
+location varchar(4000),
+amount INT(100) UNSIGNED,
+paymode varchar(100),
+`inside restaurant` TINYINT(1),
+FOREIGN KEY (`customer name`) references customers(username));
+
+create table menu(
+`item id` INT(100) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+`type` VARCHAR(4000),
+`name` VARCHAR(4000),
+`cost` INT(255)
+);
+
+create table `items`(
+`order id` INT(100) UNSIGNED,
+`item id` INT(100) UNSIGNED,
+`unit price` INT(255),
+quantity INT(100),
+PRIMARY KEY (`order id`, `item id`),
+FOREIGN KEY (`order id`) REFERENCES order(id),
+FOREIGN KEY (`item id`, `unit price`) REFERENCES menu(`item id`, `cost`)
+);
+
+Username: rohit@ohotelcecil.in
+Password: 1M@3]&V;o*&u
+Link: www.hotelcecil.in/webmail
+
+INSERT INTO `menu`(`type`, `name`, `cost`) VALUES
+('Fries', 'French fries', '50'),
+('Fries', 'Curly fries', '80'),
+('Fries', 'Animal style fries', '100'),
+('Fries', 'Cajun fries', '100');
+
+INSERT INTO `menu`(`type`, `name`, `cost`) VALUES
+('Burgers', 'Double-Double In N Out', '150'),
+('Burgers', 'Bacon cheeseburger', '120'),
+('Burgers', 'Big Mac', '150'),
+('Burgers', 'Steakburger', '300'),
+('Burgers', 'Whopper', '170');
+
+INSERT INTO `menu`(`type`, `name`, `cost`) VALUES
+('Tacos', 'Cheese Gordita', '100'),
+('Tacos', 'Crunchy Shell', '140'),
+('Tacos', 'Soft Tacos', '140'),
+('Tacos', 'Cheese Tacos', '160'),
+('Tacos', 'Jack in the Box', '170');
+
+INSERT INTO `menu`(`type`, `name`, `cost`) VALUES
+('Dessert', 'Chocolate Blizzard', '80'),
+('Dessert', 'Strawberry Burst', '80'),
+('Dessert', 'Vanilla Milkshake', '100'),
+('Dessert', 'Baked Apple Pie', '150'),
+('Dessert', 'Chocolate pudding', '100
+
+SELECT * FROM `orders` WHERE date(`date`) > '2018-1-1' AND date(`date`) < '2018-1-14'

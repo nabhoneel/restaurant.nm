@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "default";
+  src: url(../fonts/Raleway/Raleway-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "bold";
+  src: url(../fonts/Raleway/Raleway-Bold.ttf) format("truetype");
+}
+
+body {
+    font-family: 'default';
+}
+
+.outer {
+  display: table;
+  height: 100%;
+  width: 100%;
+  }
+
+  .middle {
+      display: table-cell;
+      vertical-align: middle;
+  }
+
+  .inner {
+      margin: auto;
+      padding: auto;
+      width: 100%; /*whatever width you want*/
+  }
+
+  .container {
+      /*top: 0;*/
+      /*width: 35em;*/
+  }
+
+  .circularbutton-small {
+  width: 30px;
+  height: 30px;
+  padding: 7px;
+  border-radius: 0px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.42857;
+  }
+
+  .circularbutton {
+      width: 60px;
+      height: 60px;
+      padding: 6px 0px;
+      border-radius: 30px;
+      text-align: center;
+      font-size: 25px;
+      line-height: 1.42857;
+
+  }
+
+  .item-name {
+      font-weight: 400;
+      font-size: 1.2em;
+  }
+
+  .badge {
+      width: 3em;
+      font-family: 'monospace';
+      font-size: 16px;
+      color: #333;
+      background-color: #eee;
+      border-radius: 0px;
+  }
+
+  .pay {
+      padding: 10px 16px;
+      margin: 0.5em;
+      font-size: 17px;
+      line-height: 1.3333333;
+  }
+
+  .finalOrderItem {
+      padding: 0.5em 1em;
+      font-size: 1.5em;
+  }
